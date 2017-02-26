@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Truck UI</title>
+  <meta name="description" content="Truck UI">
+  <meta name="author" content="gennadi">
+
+</head>
+
+<body>
+    <button id="btnSubmit1">1</button>
+    <button id="btnSubmit2">2</button>
+    <button id="btnSubmit3">3</button>
+    <button id="btnSubmit4">4</button>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+</body>
+</html>
+<script>
+$(document).ready(function() {
+    $("#btnSubmit1").click(function(){
+        $.ajax({
+            url: "http://192.168.8.103/arduino/digital/1/1"
+            });
+    });
+    $("#btnSubmit2").click(function(){
+        $.ajax({
+            url: "http://192.168.8.103/arduino/digital/1/2"
+            });
+    }); 
+    $("#btnSubmit3").click(function(){
+        $.ajax({
+            url: "http://192.168.8.103/arduino/digital/1/3"
+            });
+    }); 
+    $("#btnSubmit4").click(function(){
+        $.ajax({
+            url: "http://192.168.8.103/arduino/digital/1/4"
+            });
+    }); 
+});
+</script>
